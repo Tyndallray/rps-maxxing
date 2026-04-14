@@ -20,5 +20,6 @@ autocannon -m GET -c 20 -d 20 -p 2 "http://localhost:3000/health"
 
 | # | Framework | Avg RPS | Notes |
 |---|---|---|---|
-| 1 | [Express.js](../benchmarks/01-expressjs.md) | 12,200 | Simple health endpoint |
-| 1 | [Fastify](../benchmarks/02-fastify.md) | 66,600 | Simple health endpoint |
+| 1 | [Express.js](../benchmarks/01-expressjs.md) | 12,200 |  |
+| 2 | [Fastify](../benchmarks/02-fastify.md) | 66,600 |  |
+| 3 | [Hapi](../benchmarks/03-hapi.md) | 43,800 |  |

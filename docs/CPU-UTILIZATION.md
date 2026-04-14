@@ -16,7 +16,7 @@ while(true) {}
 
 Because Node.js is single-threaded by default, this maxes out exactly **one CPU core**. The OS scheduler keeps the rest of the cores mostly idle, so overall CPU usage stays low — roughly `1 / number_of_cores` percent.
 
-![Single-threaded CPU usage](docs/single-threaded.png)
+![Single-threaded CPU usage](../cpu-utilization/docs/single-threaded.png)
 
 In the screenshot above you can see only one logical CPU is pegged at 100% while the others remain near idle, resulting in a low aggregate CPU percentage in Task Manager.
 
@@ -34,7 +34,7 @@ const NUMBER_OF_CORES_TO_UTILIZE = 16;
 
 Each worker thread is scheduled by the OS onto a separate core. With 16 threads saturating 16 cores simultaneously, **overall CPU utilization hits ~100%**.
 
-![Multi-threaded CPU usage](docs/multi-threaded.png)
+![Multi-threaded CPU usage](../cpu-utilization/docs/multi-threaded.png)
 
 In the screenshot above every logical CPU graph is pegged, and Task Manager reports near-100% aggregate usage.
 
